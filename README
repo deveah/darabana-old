@@ -1,0 +1,25 @@
+
+	Darabana
+	A minimal drum synth
+	--
+
+	Darabana is a minimal drum synth that works by combining a sine wave of
+variable frequency with white noise, creating percussive sounds.
+	Arguments are given in the following order:
+
+	sineAmp sineDecay sineFreq sineFreqDecay noiseAmp noiseDecay noiseFilter
+
+	Building requires libsndfile. Compile with:
+
+	$ gcc darabana.c -o darabana -lsndfile -lm
+
+	This project is not finished and most likely full of bugs, so no warranty
+is provided.
+
+	Some presets:
+
+	bass drum		2 0.9995 35 0.001 5 0.99 0.93
+	snare drum		2 0.9995 70 0.002 1 0.9998 0.5
+	closed hihat	0 0 0 0 1 0.9995 0
+	crash			0 0 0 0 1 0.9999 0
+
